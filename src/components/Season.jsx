@@ -107,6 +107,21 @@ const Season = () => {
       </div>
 
       {/* CENTER TOGGLE BUTTON */}
+      <div className="flex justify-center mt-8">
+        <button
+          className="flex items-center justify-center px-8 py-3 bg-rose-500 text-white rounded-full shadow-lg hover:bg-rose-600 transition-all duration-300"
+          onClick={() => setShowMore((prev) => !prev)}
+        >
+          <span className="mr-3 text-lg">
+            {showMore ? "Show Less" : "Show More"}
+          </span>
+          <FaChevronDown
+            className={`text-2xl transform transition-transform duration-300 ${
+              showMore ? "rotate-180 scale-125" : "scale-100"
+            }`}
+          />
+        </button>
+      </div>
     </div>
   );
 };
