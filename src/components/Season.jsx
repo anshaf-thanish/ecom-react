@@ -49,6 +49,7 @@ const getSeasonIcon = (season) => {
 
 const Season = () => {
   const [showMore, setShowMore] = useState(false);
+  const displayedSeasons = showMore ? seasonData : seasonData.slice(0,3)
 
   return (
     <div
@@ -78,7 +79,34 @@ const Season = () => {
         <FaHeart className="inline-block text-red-500 ml-2" />
       </h2>
 
-      
+      {/* COLLECTION GRID */}
+      <div className="max-w-6xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10">
+        {displayedSeasons.map((season, index) => (
+          <div
+            key={index}
+            className={`text-center bg-pink-100 p-4 sm:p-6 lg:p-8 rounded-3xl shadow-xl transform hover:scale-105 transition-all duration-300 
+              ${index % 3 ? "animate-slide-in" : ""
+              
+            }`}
+          >
+            <img
+              src={season.images[0]}
+              alt={season.title}
+              className="w-full h-56 sm:h-64 md:h-80 object-cover rounded-2xl shadow-md transition-all duration-300 hover:shadow-lg"
+            />
+
+            {/* SEASON TITLE */}
+            <div className="flex items-center justify-center mt-4 space-x-2">
+              {getSeasonIcon(season.title)}
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold uppercase bg-gradient-to-r from-rose-500 via-red-500 to-pink-500 text-transparent bg-clip-text">
+                {season.title}
+              </h3>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* CENTER TOGGLE BUTTON */}
     </div>
   );
 };
