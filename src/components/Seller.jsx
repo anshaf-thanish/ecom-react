@@ -10,28 +10,27 @@ const bestSellers = [
     id: 1,
     image: OBS1,
     title: "Euphoria Crop Blouse",
-    price: "Rs 125.000",
+    price: "Rs 4125.000",
   },
   {
     id: 2,
     image: OBS2,
     title: "Venus Halter Dress",
-    price: "Rs 180.000",
+    price: "Rs 5180.000",
   },
   {
     id: 3,
     image: OBS3,
     title: "Snap Pure Blouse",
-    price: "Rs 129.000",
+    price: "Rs 4129.000",
   },
 ];
 
 const Seller = () => {
-  
   return (
     <div
       id="season"
-      className="relative py-8 bg-gradient-to-b from-pink-100 to-rose-400 " 
+      className="relative py-8 bg-gradient-to-b from-pink-100 to-rose-400 "
     >
       {/* FLOATING HEARTS */}
       <div className="absolute inset-0 pointer-events-none">
@@ -55,7 +54,35 @@ const Seller = () => {
         Our Best Sellers
         <FaHeart className="inline-block text-red-500 ml-2" />
       </h2>
-</div>
-  )}
+
+      <div className="max-w-6xl mx-auto px-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          {bestSellers.map((item) => (
+            <div
+              key={item.id}
+              className="relative bg-pink-200 p-4 rounded-2xl shadow-lg transition-all hover:shadow-rose-800 hover:ring-2 hover:ring-rose-300 hover:scale-105 transform duration-300 border border-rose-200"
+            >
+              <div className="w-full overflow-hidden rounded-lg">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="w-full object-cover rounded-lg shadow-md transition-all duration-500 h-48 sm:h-56 md:h-64 lg:h-96"
+                />
+              </div>
+              <div className="text-center mt-4">
+                <h3 className="text-lg sm:text-xl font-semibold text-rose-700">
+                  {item.title}
+                </h3>
+                <p className="text-gray-600 text-base sm:text-lg font-medium">
+                  {item.price}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
 
 export default Seller;
