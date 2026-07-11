@@ -16,7 +16,7 @@ import SC3 from "../assets/SC3.jpg";
 import SC4 from "../assets/SC4.jpg";
 import SC5 from "../assets/SC5.jpg";
 import SC6 from "../assets/SC6.jpg";
-import "../components/index.css";
+import "../components/theme.css";
 
 const seasonData = [
   { title: "SPRING", images: [SC1] },
