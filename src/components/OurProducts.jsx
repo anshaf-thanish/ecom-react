@@ -107,8 +107,25 @@ const OurProducts = () => {
           <FaHeart className="inline-block text-red-500 ml-2" />
         </h2>
       </div>
+
+      {/* TAB NAVIGATION */}
+      <div className="flex flex-wrap justify-center gap-4 mb-8 border-b pb-4">
+        {categories.map((category) => (
+          <button
+            key={category}
+            className={`px-4 sm:px-6 text-base py-2 sm:text-lg font-semibold transition border-b-4 ${
+              activeTab === category
+                ? "border-black text-black"
+                : "border-transparent text-gray-500 hover:text-black"
+            }`}
+            onClick={() => setActiveTab(category)}
+          >
+            {category}
+          </button>
+        ))}
+      </div>
     </div>
   );
 };
 
-export default OurProducts;
+export default OurP;
