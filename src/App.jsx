@@ -5,6 +5,7 @@ import Season from "./components/Season";
 import Seller from "./components/Seller";
 import Banner2 from "./components/Banner2";
 import OurProducts from "./components/OurProducts";
+import LIB from "./components/LIB";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
       <Seller/>
       <Banner2/>
       <OurProducts/>
+      <LIB/>
     </div>
   );
 };
