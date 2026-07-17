@@ -69,26 +69,28 @@ const Carousel = () => {
               key={index}
               className="rounded-2xl bg-pink-200 shadow-2xl p-6 transform transition-all hover:shadow-rose-500 hover:ring-2 hover:ring-rose-300  hover:scale-105 duration-300 border border-rose-200"
             >
-                <div className="w-full h-48 sm:h-56 md:h-60 overflow-hidden rounded-lg object-cover object-top shadow-md transition-all duration-500"></div>
-              <img
-                src={item.image}
-                alt={item.title}
-                className="w-full h-full md:h-60 object-cover object-top rounded-lg shadow-md transition-all duration-500"
-              />
-              <h3 className="text-xl sm:text-2xl md:text-2xl font-bold text-rose-700 mt-4">
-                {item.title}
-              </h3>
-              <div className="flex items-center gap-1 text-yellow-400 mt-2">
-                {Array(item.rating)
-                  .fill()
-                  .map((_, i) => (
-                    <FaStar key={i} className="animate-pulse" />
-                  ))}
-              </div>
-              <p className="text-gray-600 italic mt-2">{item.name} -</p>
-              <p className="text-sm sm:text-base text-gray-600 mt-3 leading-relaxed">
-                {item.review}
-              </p>
+              <div className="w-full h-48 sm:h-56 md:h-60 overflow-hidden rounded-lg object-cover object-top shadow-md transition-all duration-500">
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="w-full h-full object-cover object-top rounded-lg shadow-md transition-all duration-500"
+                />
+                </div>
+                <h3 className="text-xl sm:text-2xl md:text-2xl font-bold text-rose-700 mt-4">
+                  {item.title}
+                </h3>
+                <div className="flex items-center gap-1 text-yellow-400 mt-2">
+                  {Array(item.rating)
+                    .fill()
+                    .map((_, i) => (
+                      <FaStar key={i} className="animate-pulse" />
+                    ))}
+                </div>
+                <p className="text-gray-600 italic mt-2">- {item.name} -</p>
+                <p className="text-sm sm:text-base text-gray-600 mt-3 leading-relaxed">
+                  {item.review}
+                </p>
+              
             </div>
           ))}
         </div>
