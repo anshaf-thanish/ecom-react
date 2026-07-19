@@ -7,6 +7,7 @@ import Banner2 from "./components/Banner2";
 import OurProducts from "./components/OurProducts";
 import LIB from "./components/LIB";
 import Carousel from "./components/carousel";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
       <OurProducts/>
       <LIB/>
       <Carousel/>
+      <Footer/>
     </div>
   );
 };
