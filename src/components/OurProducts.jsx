@@ -64,8 +64,8 @@ const OurProducts = () => {
         ...acc,
         [category]: products[category].length,
       }),
-      {}
-    )
+      {},
+    ),
   );
   const [hearts, setHearts] = useState([]);
 
@@ -106,50 +106,50 @@ const OurProducts = () => {
           Our Products
           <FaHeart className="inline-block text-red-500 ml-2" />
         </h2>
-      </div>
 
-      {/* TAB NAVIGATION */}
-      <div className="flex flex-wrap justify-center gap-4 mb-8 border-b pb-4">
-        {categories.map((category) => (
-          <button
-            key={category}
-            className={`px-4 sm:px-6 text-base py-2 sm:text-lg font-semibold transition border-b-4 ${
-              activeTab === category
-                ? "border-black text-black"
-                : "border-transparent text-gray-500 hover:text-black"
-            }`}
-            onClick={() => setActiveTab(category)}
-          >
-            {category}
-          </button>
-        ))}
-      </div>
+        {/* TAB NAVIGATION */}
+        <div className="flex flex-wrap justify-center gap-4 mb-8 border-b pb-4">
+          {categories.map((category) => (
+            <button
+              key={category}
+              className={`px-4 sm:px-6 text-base py-2 sm:text-lg font-semibold transition border-b-4 ${
+                activeTab === category
+                  ? "border-black text-black"
+                  : "border-transparent text-gray-500 hover:text-black"
+              }`}
+              onClick={() => setActiveTab(category)}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
 
-      {/* PRODUCT GRIDS */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-        {products[activeTab].map((product, index) => (
-          <div
-            key={index}
-            className="bg-pink-200 rounded-2xl overflow-hidden transform transition-all animate-fade-in-up border-4 border-rose-300 p-4 shadow-md hover:shadow-xl"
-          >
-            <img
-              src={product.img}
-              alt={product.name}
-              className="w-full h-64 sm:h-72 md:h-96 object-cover rounded-t-2xl transition-opacity duration-700 hover:opacity-90"
-            />
-            <div className="text-center mt-4">
-              <h3 className="text-xl sm:text-2xl md:text-2xl font-bold text-gray-700">
-                {product.name}
-              </h3>
-              <p className="text-lg text-rose-600 font-semibold">
-                {product.price}
-              </p>
-              <button className="mt-3 bg-gradient-to-r from-red-500 to-pink-500 text-white px-4 sm:px-6 py-2 rounded-full hover:scale-105 transition shadow-lg">
-                Add to Cart
-              </button>
+        {/* PRODUCT GRIDS */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
+          {products[activeTab].map((product, index) => (
+            <div
+              key={index}
+              className="bg-pink-200 rounded-2xl overflow-hidden transform transition-all animate-fade-in-up border-4 border-rose-300 p-4 shadow-md hover:shadow-xl"
+            >
+              <img
+                src={product.img}
+                alt={product.name}
+                className="w-full h-64 sm:h-72 md:h-80 lg:h-96 object-cover rounded-t-2xl transition-opacity duration-700 hover:opacity-90"
+              />
+              <div className="text-center mt-4">
+                <h3 className="text-xl sm:text-2xl md:text-2xl font-bold text-gray-700">
+                  {product.name}
+                </h3>
+                <p className="text-lg text-rose-600 font-semibold">
+                  {product.price}
+                </p>
+                <button className="mt-3 bg-gradient-to-r from-red-500 to-pink-500 text-white px-4 sm:px-6 py-2 rounded-full hover:scale-105 transition shadow-lg">
+                  Add to Cart
+                </button>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );

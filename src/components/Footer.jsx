@@ -42,74 +42,77 @@ const Footer = () => {
           </a>
         </div>
 
-       {/* VALENTINE'S PICKS + LOVE & CARE + NEWSLETTER */}
-<div className="flex justify-center">
-  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 mb-12 max-w-5xl">
-    {/* VALENTINE'S PICKS */}
-    <div className="space-y-6 text-lg">
-      <h4 className="text-2xl font-bold text-rose-800">Valentine's Picks</h4>
-      <nav className="flex flex-col space-y-3">
-        {[
-          "Couple Outfits",
-          "Romantic Dresses",
-          "Love-themed Accessories",
-          "Gift Packages",
-          "Date Night Styles",
-        ].map((link) => (
-          <a
-            key={link}
-            href="#"
-            className="transition-colors duration-300 text-rose-800 hover:text-rose-600"
-          >
-            {link}
-          </a>
-        ))}
-      </nav>
-    </div>
+        {/* VALENTINE'S PICKS */}
+        <div className="flex justify-center">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 mb-12 max-w-5xl">
+            {/* VALENTINE'S PICKS */}
+            <div className="space-y-6 text-lg">
+              <h4 className="text-2xl font-bold text-rose-800">
+                Valentine's Picks
+              </h4>
+              <nav className="flex flex-col space-y-3">
+                {[
+                  "Couple Outfits",
+                  "Romantic Dresses",
+                  "Love-themed Accessories",
+                  "Gift Packages",
+                  "Date Night Styles",
+                ].map((link) => (
+                  <a
+                    key={link}
+                    href="#"
+                    className="transition-colors duration-300 text-rose-800 hover:text-rose-600"
+                  >
+                    {link}
+                  </a>
+                ))}
+              </nav>
+            </div>
 
-    {/* LOVE & CARE */}
-    <div className="space-y-6 text-lg">
-      <h4 className="text-2xl font-bold text-rose-800">Love & Care</h4>
-      <nav className="flex flex-col space-y-3">
-        {[
-          "Contact Us",
-          "Gift Wrapping",
-          "Romantic Surprises",
-          "Love Notes",
-          "Special Requests",
-        ].map((link) => (
-          <a
-            key={link}
-            href="#"
-            className="transition-colors duration-300 text-rose-800 hover:text-rose-600"
-          >
-            {link}
-          </a>
-        ))}
-      </nav>
-    </div>
+            {/* LOVE & CARE */}
+            <div className="space-y-6 text-lg">
+              <h4 className="text-2xl font-bold text-rose-800">Love & Care</h4>
+              <nav className="flex flex-col space-y-3">
+                {[
+                  "Contact Us",
+                  "Gift Wrapping",
+                  "Romantic Surprises",
+                  "Love Notes",
+                  "Special Requests",
+                ].map((link) => (
+                  <a
+                    key={link}
+                    href="#"
+                    className="transition-colors duration-300 text-rose-800 hover:text-rose-600"
+                  >
+                    {link}
+                  </a>
+                ))}
+              </nav>
+            </div>
 
-    {/* NEWSLETTER */}
-    <div className="space-y-6 text-lg">
-      <h4 className="text-2xl font-bold text-rose-800">Love Letters</h4>
-      <p className="text-rose-700">Get Romantic updates and sweet offers</p>
-      <form className="flex flex-col space-y-4">
-        <input
-          type="email"
-          placeholder="Your Email"
-          className="p-3 rounded-full bg-pink-700 border border-pink-600 focus:outline-none focus:border-pink-300 placeholder-gray-200 text-lg transition-colors duration-300"
-        />
-        <button
-          className="bg-pink-500 hover:bg-pink-400 transition-colors duration-300 text-white py-3 px-6 rounded-full font-bold text-lg"
-          type="submit"
-        >
-          Send Love
-        </button>
-      </form>
-    </div>
-  </div>
-</div>
-
+            {/* NEWSLETTER */}
+            <div className="space-y-6 text-lg">
+              <h4 className="text-2xl font-bold text-rose-800">Love Letters</h4>
+              <p className="text-rose-700">
+                Get Romantic updates and sweet offers
+              </p>
+              <form className="flex flex-col space-y-4">
+                <input
+                  type="email"
+                  placeholder="Your Email"
+                  className="p-3 rounded-full bg-pink-700 border border-pink-600 focus:outline-none focus:border-pink-300 placeholder-gray-200 text-lg transition-colors duration-300"
+                />
+                <button
+                  className="bg-pink-500 hover:bg-pink-400 transition-colors duration-300 text-white py-3 px-6 rounded-full font-bold text-lg"
+                  type="submit"
+                >
+                  Send Love
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
 
         {/* DIVIDER */}
         <div className="relative border-t border-pink-700 py-8">
